@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+@mixin box($border-color: null, $icon-url: null) {
+  height: 215px;
+  width: min(95%, 320px);
+  padding: 3rem;
+  border-top: inset 4px $border-color;
+  border-radius: 8px;
+  background-color: $bg-VeryLightGray;
+  background: url($icon-url) bottom 25px right 25px no-repeat;
+  background-size: 55px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.24);
+}
+
+@mixin desktop {
+  @media screen and(min-width: ($desktop * 1px)) {
+    @content;
+  }
+}

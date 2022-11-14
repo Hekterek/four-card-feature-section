@@ -1,0 +1,60 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+main {
+  margin-top: 7.5rem;
+  width: min(100%, 1440px);
+  @include desktop {
+    margin-top: 4rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.2rem;
+    @include desktop {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+.section1,
+.section2__item1,
+.section2__item2,
+.section3 {
+  &__title {
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  &__description {
+    margin-top: 1em;
+    line-height: 1.8em;
+    font-size: 1.2rem;
+    color: $fc-GrayishBlue;
+  }
+}
+
+.section1 {
+  @include box($border-Cyan, "../images/icon-supervisor.svg");
+}
+
+.section2__item1 {
+  @include box($border-Red, "../images/icon-team-builder.svg");
+}
+
+.section2__item2 {
+  @include box($border-Orange, "../images/icon-karma.svg");
+}
+
+.section3 {
+  @include box($border-Blue, "../images/icon-calculator.svg");
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.2rem;
+  max-width: 380px;
+}

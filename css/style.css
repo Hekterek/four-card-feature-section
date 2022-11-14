@@ -1,0 +1,280 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 1440px);
+}
+.header__title {
+  margin-top: 5.5rem;
+  font-size: clamp(2.3rem, 1.05vw + 1.91rem, 2.8rem);
+  font-weight: 300;
+  width: min(100%, 380px);
+  text-align: center;
+  line-height: 1.5em;
+  color: hsl(234deg, 12%, 34%);
+}
+.header__title--bold {
+  font-weight: 600;
+}
+@media screen and (min-width: 850px) {
+  .header__title {
+    margin-top: 0;
+  }
+}
+.header__description {
+  width: min(100%, 500px);
+  margin-top: 1.4rem;
+  text-align: center;
+  color: hsl(229deg, 6%, 66%);
+  line-height: 1.5em;
+}
+
+main {
+  margin-top: 7.5rem;
+  width: min(100%, 1440px);
+}
+@media screen and (min-width: 850px) {
+  main {
+    margin-top: 4rem;
+  }
+}
+main ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.2rem;
+}
+@media screen and (min-width: 850px) {
+  main ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.section1__title,
+.section2__item1__title,
+.section2__item2__title,
+.section3__title {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.section1__description,
+.section2__item1__description,
+.section2__item2__description,
+.section3__description {
+  margin-top: 1em;
+  line-height: 1.8em;
+  font-size: 1.2rem;
+  color: hsl(229deg, 6%, 66%);
+}
+
+.section1 {
+  height: 215px;
+  width: min(95%, 320px);
+  padding: 3rem;
+  border-top: inset 4px hsl(180deg, 62%, 55%);
+  border-radius: 8px;
+  background-color: hsl(0deg, 0%, 98%);
+  background: url("../images/icon-supervisor.svg") bottom 25px right 25px no-repeat;
+  background-size: 55px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.24);
+}
+
+.section2__item1 {
+  height: 215px;
+  width: min(95%, 320px);
+  padding: 3rem;
+  border-top: inset 4px hsl(0deg, 78%, 62%);
+  border-radius: 8px;
+  background-color: hsl(0deg, 0%, 98%);
+  background: url("../images/icon-team-builder.svg") bottom 25px right 25px no-repeat;
+  background-size: 55px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.24);
+}
+
+.section2__item2 {
+  height: 215px;
+  width: min(95%, 320px);
+  padding: 3rem;
+  border-top: inset 4px hsl(34deg, 97%, 64%);
+  border-radius: 8px;
+  background-color: hsl(0deg, 0%, 98%);
+  background: url("../images/icon-karma.svg") bottom 25px right 25px no-repeat;
+  background-size: 55px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.24);
+}
+
+.section3 {
+  height: 215px;
+  width: min(95%, 320px);
+  padding: 3rem;
+  border-top: inset 4px hsl(212deg, 86%, 64%);
+  border-radius: 8px;
+  background-color: hsl(0deg, 0%, 98%);
+  background: url("../images/icon-calculator.svg") bottom 25px right 25px no-repeat;
+  background-size: 55px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.24);
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.2rem;
+  max-width: 380px;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  padding: 2.7rem;
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+/*# sourceMappingURL=style.css.map */

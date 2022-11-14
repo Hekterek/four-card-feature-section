@@ -1,0 +1,21 @@
+@use "variables" as *;
+@use "mixin" as *;
+@use "reset";
+@use "header";
+@use "main";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  padding: 2.7rem;
+  background-color: $bg-VeryLightGray;
+}
